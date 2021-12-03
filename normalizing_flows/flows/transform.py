@@ -114,7 +114,7 @@ class AmortizedTransform(Transform):
         Number of parameters for this transform, given input shape
         """
         d = shape[-1]
-        return 2*d + 1
+        return d
         #count = self._param_count(shape)
         #return count
 
