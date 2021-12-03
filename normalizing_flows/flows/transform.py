@@ -113,8 +113,10 @@ class AmortizedTransform(Transform):
         """
         Number of parameters for this transform, given input shape
         """
-        count = self._param_count(shape)
-        return count
+        d = shape[-1]
+        return 2*d + 1
+        #count = self._param_count(shape)
+        #return count
 
     def create_variables(self, shape: tf.TensorShape, initializer=None, **var_kwargs):
         """
